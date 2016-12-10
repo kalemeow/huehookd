@@ -16,7 +16,7 @@ import requests
     In order to get this to work, you have to create a 
     hue user on your bridge and fill in the HUE_USER variable.
     To do so, go to your bridge's debug API interface, found
-    at http://192.168.86.165/debug/clip.html, and set the URL
+    at http://192.168.1.2/debug/clip.html, and set the URL
     as '/api' and the message body as 
     '{"devicetype": "huehookd#raspi"}'
     Go press the button on your hue bridge, then press POST
@@ -68,6 +68,5 @@ def groupsApi(groupId):
         return output
 
 
-
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000)
